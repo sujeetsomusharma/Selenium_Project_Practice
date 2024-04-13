@@ -51,11 +51,5 @@ time.sleep(5)
 
 # static drop down code
 
-print("--- After click on news section select the All Stories option form the drop down besides Archives---")
-dropdown = Select(driver.find_element(By.LINK_TEXT, "All Stories"))
-dropdown.select_by_index(5)
-print("Premium selected")
-#driver.find_element(By.XPATH, "//div/nav[1]/a[1][@title='Latest Cricket News']").click()
-time.sleep(5)
 
 print("---- END OF THE PAGE ----")
