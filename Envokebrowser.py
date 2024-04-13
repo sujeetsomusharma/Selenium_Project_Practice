@@ -3,17 +3,18 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 print("Selenium Version you are using = ", selenium.__version__)
 
-#driver = webdriver.Edge()
+# driver = webdriver.Edge()
 driver = webdriver.Chrome()
-#driver = webdriver.Firefox()
+# driver = webdriver.Firefox()
 '''This is for when we have have offline chrome browser and chrome driver if vpn resrticted the driver access 
 other wise we can user direct by using driver = webdriver.Chrome() driver.get("https://www.cricbuzz.com/")
 '''
-#s = Service("C:\Users\sujeet.sharma\Desktop\chromedriver-win64\chromedriver-win64\chromedriver.exe")
-#driver = webdriver.Chrome(service=s)
+# s = Service("C:\Users\sujeet.sharma\Desktop\chromedriver-win64\chromedriver-win64\chromedriver.exe")
+# driver = webdriver.Chrome(service=s)
 
 driver.get("https://www.cricbuzz.com/")
 print("---Browser is open---")
@@ -31,24 +32,30 @@ print("---The url of the page is--- ")
 print("The url of the page is = ", driver.current_url)
 time.sleep(2)
 
-driver.find_element(By.CLASS_NAME, "cb-plus-ico").click()
-print("--- Click for login icon done ---")
-time.sleep(2)
-
-driver.find_element(By.ID, "cb-plus-signup-option").click()
-print("---Clicked on signup done---")
-time.sleep(2)
-
-driver.find_element(By.XPATH, "//input[@type='email']").send_keys("sujeet.sharma+1@utradesolutions.com")
-print("---Email id filled for signup---")
-time.sleep(2)
-
-driver.find_element(By.XPATH, "//button[@type='eventbutton']").click()
-print("---Clicked on continue done while filled the email during signup---")
-time.sleep(2)
-
-# Login on crickbuzz site
-
-driver.find_element(By.XPATH, "//input[@type='text']").send_keys("sujeet.sharma+1@utradesolutions.com")
-print("--- Email id filled for login ---")
+print("--- Click on Live Match")
+driver.find_element(By.LINK_TEXT, "Live Scores").click()
 time.sleep(5)
+
+print("Click on Scheduled Matched on Cric-buzz")
+driver.find_element(By.LINK_TEXT, "Schedule").click()
+time.sleep(2)
+
+print("--- Click on Archive tab on cric-buzz website---")
+driver.find_element(By.CSS_SELECTOR,
+                    "a[href='/cricket-scorecard-archives']").click()  # used css_selector without using // and @
+time.sleep(2)
+
+print("--- Click on News option of cric-buzz besides Archives ---")
+driver.find_element(By.XPATH, "//div[@id='newsDropDown']").click()
+time.sleep(5)
+
+# static drop down code
+
+print("--- After click on news section select the All Stories option form the drop down besides Archives---")
+dropdown = Select(driver.find_element(By.LINK_TEXT, "All Stories"))
+dropdown.select_by_index(5)
+print("Premium selected")
+#driver.find_element(By.XPATH, "//div/nav[1]/a[1][@title='Latest Cricket News']").click()
+time.sleep(5)
+
+print("---- END OF THE PAGE ----")
