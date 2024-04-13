@@ -62,7 +62,7 @@ time.sleep(5)
 
 print("Select the values form dropdown of news section")
 driver.find_element(By.PARTIAL_LINK_TEXT, "Spotlight").click()
-time.sleep(10)
 print("Spotlight is selected")
+time.sleep(5)
 
 print("---- END OF THE PAGE ----")
