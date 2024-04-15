@@ -34,7 +34,7 @@ time.sleep(2)
 
 print("--- Click on Live Match")
 driver.find_element(By.LINK_TEXT, "Live Scores").click()
-time.sleep(5)
+time.sleep(2)
 
 print("Click on Scheduled Matched on Cric-buzz")
 driver.find_element(By.LINK_TEXT, "Schedule").click()
@@ -47,22 +47,29 @@ time.sleep(2)
 
 print("--- Click on News option of cric-buzz besides Archives ---")
 driver.find_element(By.XPATH, "//div[@id='newsDropDown']").click()
-time.sleep(5)
+time.sleep(2)
 
 # static drop down code
 print("Select the News option is clicked ")
 driver.find_element(By.LINK_TEXT, "News").click()
 print("All stories option is selected")
-time.sleep(5)
+time.sleep(2)
 
 print("Select the News option is clicked ")
 driver.find_element(By.LINK_TEXT, "News").click()
 print("All stories option is selected")
-time.sleep(5)
+time.sleep(2)
 
 print("Select the values form dropdown of news section")
 driver.find_element(By.PARTIAL_LINK_TEXT, "Spotlight").click()
 print("Spotlight is selected")
-time.sleep(5)
+time.sleep(2)
+
+print("Select the Series option from the dropdown")
+list_of_series = driver.find_elements(By.XPATH, "//div/a[@href='/cricket-schedule/series']")
+print(len(list_of_series))
+
+print("Clicked on Series option")
+time.sleep(2)
 
 print("---- END OF THE PAGE ----")
