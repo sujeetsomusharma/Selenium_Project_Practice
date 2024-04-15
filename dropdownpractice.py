@@ -33,14 +33,21 @@ print("---The url of the page is--- ")
 print("The url of the page is = ", driver.current_url)
 time.sleep(2)
 
-driver.find_element(By.ID,"autosuggest").send_keys("ind")
+driver.find_element(By.ID, "autosuggest").send_keys("ind")
 time.sleep(2)
 countries = driver.find_elements(By.CSS_SELECTOR, "li[class='ui-menu-item'] a")
 print(len(countries))
 time.sleep(5)
+
+#loop to iterate the countries from the suggested list which is combination of "ind"
+
 for country in countries:
     if country.text == "India":
         country.click()
         break
-print("Selected country name is reflected from the drop down list")
+
+print("Country selected form dropdown is =  ", driver.find_element(By.ID,"autosuggest").get_attribute("value"))
 time.sleep(5)
+assert driver.find_element(By.ID,"autosuggest").get_attribute("value") == "India" # this is for when we do not nned to print the output as on lin numbr 49
+time.sleep(2)
+print("Correct Values is selected")
