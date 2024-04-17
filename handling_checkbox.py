@@ -75,4 +75,24 @@ print("radiobutton option 2 is selected") '''
 radio_buttons = driver.find_elements(By.XPATH, "//input[@type='radio']")
 radio_buttons[1].click()
 print("Is Radio button option 2 is selected = ", radio_buttons[1].is_selected())
-time.sleep(2)
+time.sleep(1)
+
+# is_display method
+
+display_text_hide_show = driver.find_element(By.ID, "displayed-text")
+print("Is text in show and hide is visible in box = ", display_text_hide_show.is_displayed())  # this will return
+# true as hide button is not clicked first
+
+print("Hide option is clicked",
+      driver.find_element(By.ID, "hide-textbox").click())  # now option is hide button is clicked
+
+print("Is text in show and hide is visible in box = ", display_text_hide_show.is_displayed())  # this will return
+# false as hide button is clicked
+
+time.sleep(5)
+
+print("Clicked on show button")
+driver.find_element(By.ID, "show-textbox").click()  # clicked on show button
+print("Show option is clicked", display_text_hide_show.is_displayed())
+
+time.sleep(5)
