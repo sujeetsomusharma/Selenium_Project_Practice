@@ -39,15 +39,17 @@ countries = driver.find_elements(By.CSS_SELECTOR, "li[class='ui-menu-item'] a")
 print(len(countries))
 time.sleep(5)
 
-#loop to iterate the countries from the suggested list which is combination of "ind"
+# loop to iterate the countries from the suggested list which is combination of "ind"
 
 for country in countries:
     if country.text == "India":
         country.click()
         break
 
-print("Country selected form dropdown is =  ", driver.find_element(By.ID,"autosuggest").get_attribute("value"))
+print("Country selected form dropdown is =  ", driver.find_element(By.ID, "autosuggest").get_attribute("value"))
 time.sleep(5)
-assert driver.find_element(By.ID,"autosuggest").get_attribute("value") == "India" # this is for when we do not nned to print the output as on line numbr 49
+assert driver.find_element(By.ID, "autosuggest").get_attribute( "value") == "India"  # this is for when we do not nned to print the output as on line numbr 49
 time.sleep(2)
 print("Correct Values is selected")
+
+print(driver.find_element(By.XPATH, "//label[@for='ctl00_mainContent_chk_friendsandfamily']").text)
