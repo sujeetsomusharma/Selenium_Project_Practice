@@ -55,4 +55,4 @@ print("Add to cart now after product selection")
 driver.find_element(By.XPATH, "//img[@alt='Cart']").click()
 print("Click on cart is done")
 
-time.sleep(5)
+time.sleep(10)
