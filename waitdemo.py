@@ -7,6 +7,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import ui
 from selenium.webdriver.support.select import Select
 
+promo_code = "rahulshettyacademy"
+empty_promo_code = ''
+wrong_promo_code = "ahulshettyacademy"
 print("Selenium Version you are using = ", selenium.__version__)
 
 # driver = webdriver.Edge()
@@ -43,7 +46,7 @@ if len(results) > 5:
 else:
     print("Products are not in stocks please select other times to buy if you wish to buy")
 
-# click on Add Cart one by one by using chaining operation
+# click on Add Cart one by using chaining operation
 
 for result in results:
     result.find_element(By.XPATH, "div/button").click()  # this is chaining method as in results all the product is
@@ -55,4 +58,36 @@ print("Add to cart now after product selection")
 driver.find_element(By.XPATH, "//img[@alt='Cart']").click()
 print("Click on cart is done")
 
+time.sleep(2)
+
+print("Proceed to checkout")
+driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()
+print("Proceed to checkout Done")
+time.sleep(2)
+
+print("Add Promo Code")
+
+driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(empty_promo_code)
+print("Promo Code is Filled ... !")
+print("Now Click on Add button to avail the discount")
+
+driver.find_element(By.XPATH, "//button[@class='promoBtn']").click()
+print("Click on Add button is Done")
 time.sleep(10)
+
+
+promo_Info = driver.find_element(By.XPATH, "//div/span[@class='promoInfo']").text
+print(promo_Info)
+time.sleep(5)
+
+
+if promo_Info == "Code applied ..!":
+    print(" --The promo code is applied --")
+elif promo_Info == "Invalid code ..!":
+    print(" -- The promo code is not a valid code --")
+elif promo_Info == "Empty code ..!":
+    print("-- No promo code is applied ---")
+else:
+    print(" ---No promo code option is available ---")
+
+time.sleep(5)
