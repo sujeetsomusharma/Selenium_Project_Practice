@@ -49,4 +49,10 @@ for result in results:
     result.find_element(By.XPATH, "div/button").click()  # this is chaining method as in results all the product is
     # selected and by using this method we have used the single cart to select
 print("All items are added to cart with 'ber' keyword items")
+time.sleep(2)
+
+print("Add to cart now after product selection")
+driver.find_element(By.XPATH, "//img[@alt='Cart']").click()
+print("Click on cart is done")
+
 time.sleep(5)
