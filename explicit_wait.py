@@ -1,10 +1,12 @@
-# In Selenium, an "Implicit Wait" is a setting that tells the WebDriver to wait for a certain amount of time before
-# throwing a NoSuchElementException. It's useful for handling dynamic web elements, i.e., elements that are not
-# immediately available when a page loads.
+# n Selenium with Python, you can use explicit waits to wait for a certain condition to occur before proceeding
+# further in the code. Explicit waits allow you to wait for a certain condition to occur before proceeding to the
+# next step in the code execution. The WebDriverWait class takes the driver instance and the maximum amount of time to
+# wait as parameters. The until method is used to wait until a specified condition becomes True.
 #
-# When the implicit wait is applied, WebDriver will poll the DOM for a certain duration when trying to find an
-# element. If the element is found before the time specified expires, it will continue with the next instruction. If
-# the element is not found within the specified time, a NoSuchElementException will be thrown.
+# The expected_conditions module provides a variety of built-in conditions to wait for,
+# such as element_to_be_clickable, visibility_of_element_located, text_to_be_present_in_element, and more. You can
+# use these conditions according to your specific needs.
+# Remember to replace "path_to_chromedriver" with the actual path to your ChromeDriver executable.
 
 import time
 
@@ -13,8 +15,9 @@ import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import ui
+from selenium.webdriver.support import ui, expected_conditions
 from selenium.webdriver.support.select import Select
+from selenium.webdriver.support.wait import WebDriverWait
 
 print("Selenium Version you are using = ", selenium.__version__)
 
@@ -81,6 +84,8 @@ print("Now Click on Add button to avail the discount")
 driver.find_element(By.XPATH, "//button[@class='promoBtn']").click()
 print("Click on Add button is Done")
 
+wait_explicitly = WebDriverWait(driver, 10)
+wait_explicitly.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, '.promoInfo')))
 promo_Info = driver.find_element(By.XPATH, "//div/span[@class='promoInfo']").text
 print(promo_Info)
 
@@ -93,4 +98,4 @@ elif promo_Info == "Empty code ..!":
 else:
     print(" ---No promo code option is available ---")
 
-
+print("EOC")
