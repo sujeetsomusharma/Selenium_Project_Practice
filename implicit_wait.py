@@ -8,7 +8,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import ui
 from selenium.webdriver.support.select import Select
 
-
 print("Selenium Version you are using = ", selenium.__version__)
 
 # driver = webdriver.Edge()
@@ -27,18 +26,18 @@ print("---Browser is open---")
 driver.maximize_window()
 print("---Window maximize---")
 
-
 print("---The Title of the page is---")
 print("The tile is = ", driver.title)
-
 
 print("---The url of the page is--- ")
 print("The url of the page is = ", driver.current_url)
 
-
 driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 
-results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
+time.sleep(5)  # this sleep time is given because we are waiting for the
+# list to return the values of list rest things is handles with time with implicitly_wait time
+
+results = driver.find_elements(By.XPATH, "//div[@class='products']/div")  # it will return list
 print("Length of the product list with 'ber' suggested keyword", len(results))
 if len(results) > 5:
     print("Product are available to buy")
@@ -47,14 +46,10 @@ else:
 
 # click on Add Cart one by using chaining operation
 
-
-
-
 for result in results:
     result.find_element(By.XPATH, "div/button").click()  # this is chaining method as in results all the product is
     # selected and by using this method we have used the single cart to select
 print("All items are added to cart with 'ber' keyword items")
-
 
 print("Add to cart now after product selection")
 driver.find_element(By.XPATH, "//img[@alt='Cart']").click()
@@ -63,7 +58,6 @@ print("Click on cart is done")
 print("Proceed to checkout")
 driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()
 print("Proceed to checkout Done")
-
 
 promo_code = "rahulshettyacademy"
 empty_promo_code = ''
@@ -90,6 +84,5 @@ elif promo_Info == "Empty code ..!":
     print("-- No promo code is applied ---")
 else:
     print(" ---No promo code option is available ---")
-
 
 time.sleep(10)
