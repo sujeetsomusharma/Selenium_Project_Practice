@@ -13,7 +13,7 @@ print("Selenium Version you are using = ", selenium.__version__)
 
 # driver = webdriver.Edge()
 driver = webdriver.Chrome()
-
+driver.implicitly_wait(10)
 # driver = webdriver.Firefox()
 '''This is for when we have have offline chrome browser and chrome driver if vpn resrticted the driver access 
 other wise we can user direct by using driver = webdriver.Chrome() driver.get("https://www.cricbuzz.com/")
@@ -47,7 +47,7 @@ else:
 
 # click on Add Cart one by using chaining operation
 
-driver.implicitly_wait(10)
+
 
 
 for result in results:
@@ -92,3 +92,4 @@ else:
     print(" ---No promo code option is available ---")
 
 
+time.sleep(10)
