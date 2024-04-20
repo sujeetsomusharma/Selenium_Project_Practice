@@ -23,7 +23,7 @@ print("Selenium Version you are using = ", selenium.__version__)
 
 # driver = webdriver.Edge()
 driver = webdriver.Chrome()
-driver.implicitly_wait(10)
+driver.implicitly_wait(5)
 # driver = webdriver.Firefox()
 '''This is for when we have have offline chrome browser and chrome driver if vpn resrticted the driver access 
 other wise we can user direct by using driver = webdriver.Chrome() driver.get("https://www.cricbuzz.com/")
@@ -76,7 +76,7 @@ wrong_promo_code = "ahulshettyacademy"
 
 print("Add Promo Code")
 
-driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(empty_promo_code)
+driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(promo_code)
 
 print("Promo Code is Filled ... !")
 print("Now Click on Add button to avail the discount")
@@ -86,6 +86,7 @@ print("Click on Add button is Done")
 
 wait_explicitly = WebDriverWait(driver, 10)
 wait_explicitly.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, '.promoInfo')))
+print("Explicit Code Applied")
 promo_Info = driver.find_element(By.XPATH, "//div/span[@class='promoInfo']").text
 print(promo_Info)
 
