@@ -7,9 +7,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import ui
 from selenium.webdriver.support.select import Select
 
-promo_code = "rahulshettyacademy"
-empty_promo_code = ''
-wrong_promo_code = "ahulshettyacademy"
 print("Selenium Version you are using = ", selenium.__version__)
 
 # driver = webdriver.Edge()
@@ -65,9 +62,14 @@ driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()
 print("Proceed to checkout Done")
 time.sleep(2)
 
+promo_code = "rahulshettyacademy"
+empty_promo_code = ''
+wrong_promo_code = "ahulshettyacademy"
+
 print("Add Promo Code")
 
 driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(empty_promo_code)
+
 print("Promo Code is Filled ... !")
 print("Now Click on Add button to avail the discount")
 
@@ -75,11 +77,9 @@ driver.find_element(By.XPATH, "//button[@class='promoBtn']").click()
 print("Click on Add button is Done")
 time.sleep(10)
 
-
 promo_Info = driver.find_element(By.XPATH, "//div/span[@class='promoInfo']").text
 print(promo_Info)
 time.sleep(5)
-
 
 if promo_Info == "Code applied ..!":
     print(" --The promo code is applied --")
