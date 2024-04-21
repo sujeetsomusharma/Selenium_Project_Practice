@@ -99,5 +99,20 @@ elif promo_Info == "Empty code ..!":
 else:
     print(" ---No promo code option is available ---")
 
+print("Print the sum of the items price")
+prices = driver.find_elements(By.CSS_SELECTOR, "tr td:nth-child(5) p")
+
+sum_of_price = 0
+for price in prices:
+    sum_of_price = sum_of_price + int(price.text)
+print(sum_of_price)
+
+final_amount = int(driver.find_element(By.XPATH, "//span[@class='totAmt']").text)
+print("The final amount of the items is = ₹", final_amount)
+
+if sum_of_price == final_amount:
+    print("Price is calculated correct which is = ₹", final_amount)
+else:
+    print("Price calculated wrong which is not = ₹", final_amount)
 
 print("EOC")
