@@ -1,3 +1,9 @@
+# Assignment ->
+# 1- To validate the discounted price is less than the actual amount of the item
+# 2 - To grab the product name and check with the expected list of items to the actual list of the items.
+
+
+
 import time
 
 import driver
