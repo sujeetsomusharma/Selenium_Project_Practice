@@ -3,7 +3,6 @@
 # 2 - To grab the product name and check with the expected list of items to the actual list of the items.
 
 
-
 import time
 
 import driver
@@ -16,8 +15,8 @@ from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.wait import WebDriverWait
 
 print("Selenium Version you are using = ", selenium.__version__)
-
 # driver = webdriver.Edge()
+
 driver = webdriver.Chrome()
 driver.implicitly_wait(5)
 # driver = webdriver.Firefox()
