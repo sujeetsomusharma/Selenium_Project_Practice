@@ -65,6 +65,7 @@ driver.close()
 time.sleep(2)
 
 driver.switch_to.window(windowsOpened[0])
+
 if "A/B Test Control" == driver.find_element(By.TAG_NAME, "h3").text:
     print("Switched over parent tab done")
 else:
