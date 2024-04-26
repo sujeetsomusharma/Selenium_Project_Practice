@@ -31,6 +31,7 @@ print("The tile is = ", driver.title)
 time.sleep(2)
 
 print("---The url of the page is--- ")
+
 print("The url of the page is = ", driver.current_url)
 time.sleep(2)
 
