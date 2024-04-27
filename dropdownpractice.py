@@ -48,7 +48,8 @@ for country in countries:
 
 print("Country selected form dropdown is =  ", driver.find_element(By.ID, "autosuggest").get_attribute("value"))
 time.sleep(5)
-assert driver.find_element(By.ID, "autosuggest").get_attribute( "value") == "India"  # this is for when we do not nned to print the output as on line numbr 49
+assert driver.find_element(By.ID, "auto-suggest").get_attribute( "value") == "India"  # this is for when we do not
+# nned to print the output as on line number 49
 time.sleep(2)
 print("Correct Values is selected")
 
