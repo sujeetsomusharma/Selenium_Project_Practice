@@ -71,4 +71,5 @@ if "A/B Test Control" == driver.find_element(By.TAG_NAME, "h3").text:
 else:
     print("Stay on child tab")
     driver.switch_to.window(windowsOpened[0])
+
 time.sleep(2)
