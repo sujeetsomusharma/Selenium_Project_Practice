@@ -25,7 +25,7 @@
 
 
 import time
-
+from datetime import datetime
 import document
 import selenium
 from selenium import webdriver
@@ -35,6 +35,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import ui
 from selenium.webdriver.support.select import Select
 
+current_time = datetime.now()
 chrome_option = webdriver.ChromeOptions()
 chrome_option.add_argument("headless")  # this is for to stop to envoke the browser
 # and only the execution will run in background
@@ -80,6 +81,6 @@ time.sleep(2)
 
 print("Take the screen-shot of the page after scroll to bottom of the page")
 driver.get_screenshot_as_file("screen-shot.png")  # this is to take the screenshot of the page
-print("Screen shot is done")
+print("Screen shot is done at = ",current_time )
 
 time.sleep(2)

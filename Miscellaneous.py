@@ -1,6 +1,4 @@
 import time
-
-import document
 import selenium
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
