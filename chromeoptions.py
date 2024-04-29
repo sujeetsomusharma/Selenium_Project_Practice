@@ -4,7 +4,7 @@ import time
 chrome_option = webdriver.ChromeOptions()
 chrome_option.add_argument("--start-maximized")
 chrome_option.add_argument("headless")
-chrome_option.add_argument("-ignore-certificate-errors")
+chrome_option.add_argument("--ignore-certificate-errors")
 
 driver = webdriver.Chrome(options=chrome_option)
 
