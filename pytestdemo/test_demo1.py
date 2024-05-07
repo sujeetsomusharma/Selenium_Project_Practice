@@ -17,10 +17,13 @@
 # You can use @pytest.mark to apply built-in markers provided by pytest or create your own custom markers. Here are
 # some common uses:
 
-# Built-in Markers:
-# @pytest.mark.skip: Skips a test without running it.
-# @pytest.mark.xfail: Marks a test as expected to fail.
-# @pytest.mark.parametrize: Provides multiple sets of arguments to a test function.
+# Built-in Markers: @pytest.mark.skip: Skips a test without running it. @pytest.mark.xfail: Marks a test as expected
+# to fail. @pytest.mark.parametrize: Provides multiple sets of arguments to a test function. In pytest,
+# pytest.fixture() is a decorator used to define fixtures. Fixtures are functions that provide a baseline setup or
+# context for your tests. They can set up resources needed by your tests, such as database connections,
+# temporary directories, or mock objects, and clean up after the tests are finished.
+# fixture are used as setup and tear down methods for test cases - conftest file to generalize.
+# fixture and make it available to all test cases.
 
 import pytest
 
