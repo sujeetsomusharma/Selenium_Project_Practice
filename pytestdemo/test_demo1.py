@@ -5,7 +5,7 @@
 # if it exists that means it will override the previous case.
 # to run the scripts there are various method just like pytest.py -s -v -k
 # -s is for logs in output, -k is to run specific methods using rgex, -v is for logs with more info with meta data,
-# also we can run specifc file with file name like pytest.py "file name" -v -s -k.
+# also we can run specific file with file name like pytest.py "file name" -v -s -k.
 # we can also run the specific method that we need to run smoke test with "@pytest.mark.smoke" with the flag name -m
 # "@pytest.mark.skip" is to skip any method in pytest
 # if any bug in any method but still want to run but with no output then we can use "@pytest.mark.xfail"
