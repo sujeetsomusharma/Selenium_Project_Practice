@@ -17,3 +17,7 @@ def test_creditNumber2():
 @pytest.mark.xfail(reason="This is a failed case which is not expected as per requirement")
 def test_fail_case():
     print("Failed Case")
+
+
+def test_load_browser(crossBrowser):
+    print(crossBrowser)

@@ -21,9 +21,13 @@
 # to fail. @pytest.mark.parametrize: Provides multiple sets of arguments to a test function. In pytest,
 # pytest.fixture() is a decorator used to define fixtures. Fixtures are functions that provide a baseline setup or
 # context for your tests. They can set up resources needed by your tests, such as database connections,
-# temporary directories, or mock objects, and clean up after the tests are finished.
-# fixture are used as setup and tear down methods for test cases - conftest file to generalize.
-# fixture and make it available to all test cases.
+# temporary directories, or mock objects, and clean up after the tests are finished. fixture are used as setup and
+# tear down methods for test cases - conftest file to generalize. fixture and make it available to all test cases (
+# fixture name into parameters of method) data driven and parametrization can be done with  return statement in tuple
+# or list format when you define fixture scope to class only, it will run once before class is initiated and at the
+# end . to generate html report of testcases we need to run install (pip install pytest-html  ) and to generate html
+# report file we need to run this command (pytest --html=reports.html)
+
 
 import pytest
 
@@ -39,3 +43,7 @@ def test_secondDemo():
     msg = "Hi Good Morning"
     assert msg == "Hi Good Morning"
     # assert msg == "hi", "This is not the correct message"
+
+
+def loadbrowser():
+    print(crossBrowser)
