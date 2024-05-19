@@ -3,3 +3,12 @@
 2024-05-19 15:22:31,678 :ERROR : test_add_numbers : A Major error has happened
 2024-05-19 15:22:31,678 :CRITICAL : test_add_numbers : Critical issue
 2024-05-19 15:22:31,678 :INFO : test_add_numbers : 14
+2024-05-19 15:25:14,964 :INFO : test_add_numbers : Information statement
+2024-05-19 15:25:14,964 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:25:14,964 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:25:14,964 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:25:14,964 :INFO : test_add_numbers : 14
+2024-05-19 15:25:14,973 :INFO : pytestdemo.test_logserror : Information statement
+2024-05-19 15:25:14,973 :WARNING : pytestdemo.test_logserror : Something is in warning mode
+2024-05-19 15:25:14,973 :ERROR : pytestdemo.test_logserror : A Major error has happened
+2024-05-19 15:25:14,973 :CRITICAL : pytestdemo.test_logserror : Critical issue
