@@ -10,7 +10,7 @@ class AddNumber(LogClass):
 
     def test_add_numbers(self, a, b):
         log = self.getLogger()
-        log.info(a+b)
+        log.info(a + b)
         return a + b
 
 
