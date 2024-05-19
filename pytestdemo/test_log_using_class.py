@@ -1,10 +1,12 @@
+import inspect
 import logging  # this is package
 
 
 # object created and logging.logger() is a method
 class LogClass:
     def getLogger(self):
-        logger = logging.getLogger(__name__)  # __name__ to   generate test case name
+        loggerName = inspect.stack()[1][3]
+        logger = logging.getLogger(loggerName)  # __name__ to   generate test case name
 
         filehandler = logging.FileHandler("logfile.log")
         formatter = logging.Formatter("%(asctime)s :%(levelname)s : %(name)s : %(message)s")

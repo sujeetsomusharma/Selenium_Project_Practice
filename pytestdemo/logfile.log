@@ -1,25 +1,5 @@
-2024-05-19 14:58:05,911 :INFO : pytestdemo.test_log_using_class : Information statement
-2024-05-19 14:58:05,911 :WARNING : pytestdemo.test_log_using_class : Something is in warning mode
-2024-05-19 14:58:05,911 :ERROR : pytestdemo.test_log_using_class : A Major error has happened
-2024-05-19 14:58:05,911 :CRITICAL : pytestdemo.test_log_using_class : Critical issue
-2024-05-19 14:58:05,911 :INFO : pytestdemo.test_log_using_class : 14
-2024-05-19 14:58:49,238 :INFO : pytestdemo.test_log_using_class : Information statement
-2024-05-19 14:58:49,238 :WARNING : pytestdemo.test_log_using_class : Something is in warning mode
-2024-05-19 14:58:49,238 :ERROR : pytestdemo.test_log_using_class : A Major error has happened
-2024-05-19 14:58:49,238 :CRITICAL : pytestdemo.test_log_using_class : Critical issue
-2024-05-19 14:58:49,238 :INFO : pytestdemo.test_log_using_class : 14
-2024-05-19 14:58:57,455 :INFO : pytestdemo.test_log_using_class : Information statement
-2024-05-19 14:58:57,456 :WARNING : pytestdemo.test_log_using_class : Something is in warning mode
-2024-05-19 14:58:57,456 :ERROR : pytestdemo.test_log_using_class : A Major error has happened
-2024-05-19 14:58:57,456 :CRITICAL : pytestdemo.test_log_using_class : Critical issue
-2024-05-19 14:58:57,456 :INFO : pytestdemo.test_log_using_class : 14
-2024-05-19 14:58:59,338 :INFO : pytestdemo.test_log_using_class : Information statement
-2024-05-19 14:58:59,338 :WARNING : pytestdemo.test_log_using_class : Something is in warning mode
-2024-05-19 14:58:59,338 :ERROR : pytestdemo.test_log_using_class : A Major error has happened
-2024-05-19 14:58:59,338 :CRITICAL : pytestdemo.test_log_using_class : Critical issue
-2024-05-19 14:58:59,338 :INFO : pytestdemo.test_log_using_class : 14
-2024-05-19 14:59:00,403 :INFO : pytestdemo.test_log_using_class : Information statement
-2024-05-19 14:59:00,403 :WARNING : pytestdemo.test_log_using_class : Something is in warning mode
-2024-05-19 14:59:00,403 :ERROR : pytestdemo.test_log_using_class : A Major error has happened
-2024-05-19 14:59:00,403 :CRITICAL : pytestdemo.test_log_using_class : Critical issue
-2024-05-19 14:59:00,403 :INFO : pytestdemo.test_log_using_class : 14
+2024-05-19 15:22:31,678 :INFO : test_add_numbers : Information statement
+2024-05-19 15:22:31,678 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:22:31,678 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:22:31,678 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:22:31,678 :INFO : test_add_numbers : 14
