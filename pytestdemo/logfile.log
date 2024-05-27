@@ -1,0 +1,80 @@
+2024-05-19 15:22:31,678 :INFO : test_add_numbers : Information statement
+2024-05-19 15:22:31,678 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:22:31,678 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:22:31,678 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:22:31,678 :INFO : test_add_numbers : 14
+2024-05-19 15:25:14,964 :INFO : test_add_numbers : Information statement
+2024-05-19 15:25:14,964 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:25:14,964 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:25:14,964 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:25:14,964 :INFO : test_add_numbers : 14
+2024-05-19 15:25:14,973 :INFO : pytestdemo.test_logserror : Information statement
+2024-05-19 15:25:14,973 :WARNING : pytestdemo.test_logserror : Something is in warning mode
+2024-05-19 15:25:14,973 :ERROR : pytestdemo.test_logserror : A Major error has happened
+2024-05-19 15:25:14,973 :CRITICAL : pytestdemo.test_logserror : Critical issue
+2024-05-19 15:31:09,921 :INFO : test_add_numbers : Information statement
+2024-05-19 15:31:09,921 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:31:09,921 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:31:09,921 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:31:09,921 :INFO : test_add_numbers : 14
+2024-05-19 15:31:19,212 :INFO : test_add_numbers : Information statement
+2024-05-19 15:31:19,212 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:31:19,212 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:31:19,212 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:31:19,212 :INFO : test_add_numbers : 14
+2024-05-19 15:31:19,221 :INFO : pytestdemo.test_logserror : Information statement
+2024-05-19 15:31:19,221 :WARNING : pytestdemo.test_logserror : Something is in warning mode
+2024-05-19 15:31:19,221 :ERROR : pytestdemo.test_logserror : A Major error has happened
+2024-05-19 15:31:19,221 :CRITICAL : pytestdemo.test_logserror : Critical issue
+2024-05-19 15:36:30,607 :INFO : test_load_data : Information statement
+2024-05-19 15:36:30,608 :WARNING : test_load_data : Something is in warning mode
+2024-05-19 15:36:30,608 :ERROR : test_load_data : A Major error has happened
+2024-05-19 15:36:30,608 :CRITICAL : test_load_data : Critical issue
+2024-05-19 15:36:40,888 :INFO : test_add_numbers : Information statement
+2024-05-19 15:36:40,888 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:36:40,888 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:36:40,888 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:36:40,888 :INFO : test_add_numbers : 14
+2024-05-19 15:36:40,897 :INFO : test_load_data : Information statement
+2024-05-19 15:36:40,897 :WARNING : test_load_data : Something is in warning mode
+2024-05-19 15:36:40,897 :ERROR : test_load_data : A Major error has happened
+2024-05-19 15:36:40,897 :CRITICAL : test_load_data : Critical issue
+2024-05-19 15:36:40,993 :INFO : pytestdemo.test_logserror : Information statement
+2024-05-19 15:36:40,993 :WARNING : pytestdemo.test_logserror : Something is in warning mode
+2024-05-19 15:36:40,993 :ERROR : pytestdemo.test_logserror : A Major error has happened
+2024-05-19 15:36:40,993 :CRITICAL : pytestdemo.test_logserror : Critical issue
+2024-05-19 15:37:45,098 :INFO : test_add_numbers : Information statement
+2024-05-19 15:37:45,098 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:37:45,098 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:37:45,098 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:37:45,098 :INFO : test_add_numbers : 14
+2024-05-19 15:37:45,107 :INFO : test_load_data : Information statement
+2024-05-19 15:37:45,107 :WARNING : test_load_data : Something is in warning mode
+2024-05-19 15:37:45,107 :ERROR : test_load_data : A Major error has happened
+2024-05-19 15:37:45,107 :CRITICAL : test_load_data : Critical issue
+2024-05-19 15:37:45,197 :INFO : pytestdemo.test_logserror : Information statement
+2024-05-19 15:37:45,201 :WARNING : pytestdemo.test_logserror : Something is in warning mode
+2024-05-19 15:37:45,201 :ERROR : pytestdemo.test_logserror : A Major error has happened
+2024-05-19 15:37:45,201 :CRITICAL : pytestdemo.test_logserror : Critical issue
+2024-05-19 15:37:50,995 :INFO : test_load_data : Information statement
+2024-05-19 15:37:50,995 :WARNING : test_load_data : Something is in warning mode
+2024-05-19 15:37:50,996 :ERROR : test_load_data : A Major error has happened
+2024-05-19 15:37:50,996 :CRITICAL : test_load_data : Critical issue
+2024-05-19 15:37:55,916 :INFO : test_load_data : Information statement
+2024-05-19 15:37:55,917 :WARNING : test_load_data : Something is in warning mode
+2024-05-19 15:37:55,917 :ERROR : test_load_data : A Major error has happened
+2024-05-19 15:37:55,917 :CRITICAL : test_load_data : Critical issue
+2024-05-19 15:45:22,614 :INFO : test_add_numbers : Information statement
+2024-05-19 15:45:22,615 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:45:22,615 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:45:22,615 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:45:22,615 :INFO : test_add_numbers : 14
+2024-05-19 15:45:55,127 :INFO : test_add_numbers : Information statement
+2024-05-19 15:45:55,127 :WARNING : test_add_numbers : Something is in warning mode
+2024-05-19 15:45:55,127 :ERROR : test_add_numbers : A Major error has happened
+2024-05-19 15:45:55,127 :CRITICAL : test_add_numbers : Critical issue
+2024-05-19 15:45:55,127 :INFO : test_add_numbers : 14
+2024-05-19 15:45:55,137 :INFO : pytestdemo.test_logserror : Information statement
+2024-05-19 15:45:55,138 :WARNING : pytestdemo.test_logserror : Something is in warning mode
+2024-05-19 15:45:55,138 :ERROR : pytestdemo.test_logserror : A Major error has happened
+2024-05-19 15:45:55,138 :CRITICAL : pytestdemo.test_logserror : Critical issue
