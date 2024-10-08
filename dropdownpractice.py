@@ -89,3 +89,5 @@ time.sleep(2)
 print("Correct Values is selected")
 
 print(driver.find_element(By.XPATH, "//label[@for='ctl00_mainContent_chk_friendsandfamily']").text)
+
+driver.quit()
