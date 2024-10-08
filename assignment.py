@@ -75,6 +75,7 @@ print("Add Promo Code")
 driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(promo_code)
 
 print("Promo Code is Filled ... !")
+
 print("Now Click on Add button to avail the discount")
 
 driver.find_element(By.XPATH, "//button[@class='promoBtn']").click()
@@ -114,6 +115,29 @@ if discounted_price < final_amount:
     print("Discount Promo Code is applied !!!")
 else:
     print("Discounted Promo Code is Invalid and not Applied")
+
+print("Click on Place Order button")
+driver.find_element(By.XPATH,"//button[text()='Place Order']").click()
+print("Place order button click done")
+time.sleep(2)
+
+print("Select the country from drop down field")
+driver.find_element(By.XPATH,"//select[@style='width: 200px;']").click()
+print("list of countries are")
+
+print("Select the country name i.e INDIA")
+driver.find_element(By.XPATH,"//option[@value='India']").click()
+print("India is selected")
+time.sleep(2)
+print("Accept the terms and condition")
+driver.find_element(By.CSS_SELECTOR,"input[type='checkbox']").click()
+print("Terms and condition accepted")
+time.sleep(2)
+
+print("Click on proceed button")
+driver.find_element(By.XPATH,"//button[text()='Proceed']").click()
+print("Proceed button clicked")
+time.sleep(2)
 
 print("---EOC---")
 time.sleep(5)
