@@ -33,6 +33,41 @@ print("---The url of the page is--- ")
 print("The url of the page is = ", driver.current_url)
 time.sleep(2)
 
+
+# In Selenium for Python, select_by_value() is used to select an option from a dropdown list (which is created using
+# the <select> tag) by specifying the value attribute of the <option> tag. This is done using the Select class from
+# selenium.webdriver.support.ui.
+# Here’s a step-by-step guide to using select_by_value():
+# Steps:
+# Import the required classes.
+# Find the dropdown element (the <select> tag).
+# Use the Select class to wrap the dropdown element.
+# Call the select_by_value() method with the desired option's value.
+
+# ----------Example--------------
+
+# from selenium import webdriver
+# from selenium.webdriver.support.ui import Select
+#
+# # Initialize the driver
+# driver = webdriver.Chrome()
+#
+# # Open the webpage with the dropdown
+# driver.get('http://example.com')
+#
+# # Locate the dropdown element using its ID, name, or other attribute
+# dropdown_element = driver.find_element_by_id('dropdown_id')
+#
+# # Wrap the element in a Select object
+# select = Select(dropdown_element)
+#
+# # Select an option by its value attribute
+# select.select_by_value('value_of_the_option')
+#
+# # Close the driver
+# driver.quit()
+# ------------------------------------------------------------------------------------------
+
 driver.find_element(By.ID, "autosuggest").send_keys("ind")
 time.sleep(2)
 countries = driver.find_elements(By.CSS_SELECTOR, "li[class='ui-menu-item'] a")
@@ -48,7 +83,7 @@ for country in countries:
 
 print("Country selected form dropdown is =  ", driver.find_element(By.ID, "autosuggest").get_attribute("value"))
 time.sleep(5)
-assert driver.find_element(By.ID, "auto-suggest").get_attribute( "value") == "India"  # this is for when we do not
+assert driver.find_element(By.ID, "auto-suggest").get_attribute("value") == "India"  # this is for when we do not
 # need to print the output as on line number 49
 time.sleep(2)
 print("Correct Values is selected")

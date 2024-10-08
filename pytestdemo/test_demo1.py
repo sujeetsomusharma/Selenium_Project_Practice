@@ -41,7 +41,7 @@ def test_firstDemo():
 @pytest.mark.smoke
 def test_secondDemo():
     msg = "Hi Good Morning"
-    assert msg == "Hi Good Morning"
+    assert msg == "Hi Good Morning", "This is a correct message"
     # assert msg == "hi", "This is not the correct message"
 
 

@@ -12,7 +12,7 @@ print("Selenium Version you are using = ", selenium.__version__)
 # driver = webdriver.Edge()
 driver = webdriver.Chrome()
 # driver = webdriver.Firefox()
-'''This is for when we have have offline chrome browser and chrome driver if vpn resrticted the driver access 
+'''This is for when we have have offline chrome browser and chrome driver if vpn restricted the driver access 
 other wise we can user direct by using driver = webdriver.Chrome() driver.get("https://www.cricbuzz.com/")
 '''
 # s = Service("C:\Users\sujeet.sharma\Desktop\chromedriver-win64\chromedriver-win64\chromedriver.exe")
