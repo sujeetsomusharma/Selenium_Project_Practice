@@ -39,6 +39,7 @@ driver.find_element(By.CSS_SELECTOR, ".search-keyword").send_keys("ber")
 time.sleep(2)
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
 print("Length of the product list with 'ber' suggested keyword", len(results))
+
 if len(results) > 5:
     print("Product are available to buy")
 else:

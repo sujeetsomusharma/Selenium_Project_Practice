@@ -51,6 +51,8 @@ for result in results:
     actual_list.append(result.find_element(By.XPATH, "h4").text)
     result.find_element(By.XPATH, "div/button").click()
 
+# we can you assert as well - > assert expected_list == actual_list
+
 if expected_list == actual_list:
     print("The actual and expected list are same")
 else:
@@ -119,7 +121,7 @@ else:
 print("Click on Place Order button")
 driver.find_element(By.XPATH,"//button[text()='Place Order']").click()
 print("Place order button click done")
-time.sleep(2)
+
 
 print("Select the country from drop down field")
 driver.find_element(By.XPATH,"//select[@style='width: 200px;']").click()
@@ -128,16 +130,16 @@ print("list of countries are")
 print("Select the country name i.e INDIA")
 driver.find_element(By.XPATH,"//option[@value='India']").click()
 print("India is selected")
-time.sleep(2)
+
 print("Accept the terms and condition")
 driver.find_element(By.CSS_SELECTOR,"input[type='checkbox']").click()
 print("Terms and condition accepted")
-time.sleep(2)
+
 
 print("Click on proceed button")
 driver.find_element(By.XPATH,"//button[text()='Proceed']").click()
 print("Proceed button clicked")
-time.sleep(2)
+
 
 print("---EOC---")
-time.sleep(5)
+

@@ -49,7 +49,7 @@ for checkbox in checkboxes:
     if checkbox.get_attribute("value") == "option3":
         checkbox.click()
         # to check is option is selected or not we have a method -> is.selected()
-        print(checkbox.is_selected())
+        print("Option 3 is selected : ", checkbox.is_selected())
         assert checkbox.is_selected()
         break
 print("Checkbox option 3 is selected")
@@ -73,8 +73,9 @@ print("radiobutton option 2 is selected") '''
 # this is method 2
 
 radio_buttons = driver.find_elements(By.XPATH, "//input[@type='radio']")
-radio_buttons[1].click()
-print("Is Radio button option 2 is selected = ", radio_buttons[1].is_selected())
+radio_buttons[2].click()
+print("Is Radio button option 2 is selected = ", radio_buttons[2].is_selected())
+assert radio_buttons[2].is_selected()
 time.sleep(1)
 
 # is_display method

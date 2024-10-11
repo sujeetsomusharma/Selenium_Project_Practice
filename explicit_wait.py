@@ -50,7 +50,21 @@ time.sleep(5)  # this sleep time is given because we are waiting for the
 
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")  # it will return list
 print("Length of the product list with 'ber' suggested keyword", len(results))
-if len(results) > 5:
+
+product_names = []  # Initialize an empty list
+
+results = driver.find_elements(By.XPATH, "//div[@class='products']/div")
+
+for result in results:
+    # Assuming the product name is in a specific child element, like a <h4> or <p> tag
+    product_name = result.find_element(By.CLASS_NAME, "product-name").text  # this is chaining method as find the
+    # elements on "result" Replace 'product-name' with the actual
+    # class or tag
+    product_names.append(product_name)  # Add the product name to the list
+
+print("Product Names:", product_names)
+
+if len(product_names) >= len(results):
     print("Product are available to buy")
 else:
     print("Products are not in stocks please select other times to buy if you wish to buy")
@@ -67,7 +81,9 @@ driver.find_element(By.XPATH, "//img[@alt='Cart']").click()
 print("Click on cart is done")
 
 print("Proceed to checkout")
-driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()
+driver.find_element(By.XPATH, "//button[text()='PROCEED TO CHECKOUT']").click()  # //button[text()='PROCEED TO
+# CHECKOUT']
+# this type of find the text() is not available with the css selector.
 print("Proceed to checkout Done")
 
 promo_code = "rahulshettyacademy"
@@ -76,7 +92,9 @@ wrong_promo_code = "ahulshettyacademy"
 
 print("Add Promo Code")
 
-driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(promo_code)
+# driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(promo_code)
+# driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(empty_promo_code)
+driver.find_element(By.XPATH, "//input[@class='promoCode']").send_keys(wrong_promo_code)
 
 print("Promo Code is Filled ... !")
 print("Now Click on Add button to avail the discount")
@@ -85,7 +103,8 @@ driver.find_element(By.XPATH, "//button[@class='promoBtn']").click()
 print("Click on Add button is Done")
 
 wait_explicitly = WebDriverWait(driver, 10)
-wait_explicitly.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, '.promoInfo')))
+wait_explicitly.until(expected_conditions.presence_of_element_located((By.CSS_SELECTOR, '.promoInfo')))  # this is
+# used when the element presence is to identify. It will wait until the element is not appeared.
 print("Explicit Code Applied")
 promo_Info = driver.find_element(By.XPATH, "//div/span[@class='promoInfo']").text
 print(promo_Info)

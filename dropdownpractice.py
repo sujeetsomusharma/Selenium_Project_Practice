@@ -81,6 +81,7 @@ for country in countries:
         country.click()
         break
 
+# get_attribute is used when the text is dynamic and if we have to retrieve the data from the text field.
 print("Country selected form dropdown is =  ", driver.find_element(By.ID, "autosuggest").get_attribute("value"))
 time.sleep(5)
 assert driver.find_element(By.ID, "auto-suggest").get_attribute("value") == "India"  # this is for when we do not

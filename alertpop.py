@@ -50,7 +50,7 @@ time.sleep(2)
 
 # once the click on alert button is done then a pop up will
 # appear but the pop is not understood by selenium webdriver
-# beacuse selenium web driver only understood the html code not the JS
+# because selenium web driver only understood the html code not the JS
 # for this we need to switch from browser mode to alert mode
 
 alert = driver.switch_to.alert  # this is a method to switch form browser to alert mode to read the content of the

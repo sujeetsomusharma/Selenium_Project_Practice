@@ -47,6 +47,7 @@ time.sleep(5)  # this sleep time is given because we are waiting for the
 
 results = driver.find_elements(By.XPATH, "//div[@class='products']/div")  # it will return list
 print("Length of the product list with 'ber' suggested keyword", len(results))
+
 if len(results) > 5:
     print("Product are available to buy")
 else:
