@@ -32,7 +32,7 @@ time.sleep(2)
 products = driver.find_elements(By.XPATH, "//div[@class='card h-100']")
 
 for product in products:
-    productName = product.find_element(By.XPATH, "div/h4/a").text
+    productName = product.find_element(By.XPATH, "div/h4/a").text  # chaining of the element
     if productName == "Blackberry":
         product.find_element(By.XPATH, "div/button").click()
 
