@@ -37,20 +37,13 @@ for product in products:
         product.find_element(By.XPATH, "div/button").click()
 
 driver.find_element(By.CSS_SELECTOR, "a[class*='btn-primary']").click()
-time.sleep(5)
 driver.find_element(By.XPATH, "//button[@class='btn btn-success']").click()
-time.sleep(5)
 driver.find_element(By.ID, "country").send_keys("ind")
 wait = WebDriverWait(driver, 20)
 
 wait.until(expected_conditions.presence_of_element_located((By.LINK_TEXT, "India")))
-time.sleep(5)
 driver.find_element(By.LINK_TEXT, "India").click()
-time.sleep(5)
 driver.find_element(By.XPATH, "//div[@class='checkbox checkbox-primary']").click()
-time.sleep(5)
 driver.find_element(By.CSS_SELECTOR, "[type='submit']").click()
-time.sleep(5)
 successText = driver.find_element(By.CLASS_NAME, "alert-success").text
-time.sleep(5)
 assert "Success! Thank you!" in successText
